@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Portfolio - Dawson Ekondo</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <img src="./img/moi.jpg" alt="Photo de Dawson Ekondo" class="profile-photo" />
+            <div>
+                <h1>Dawson Ekondo</h1>
+                <p>École : KEYCE Academy | Filière : RSI | Niveau : B1</p>
+            </div>
+            <button id="toggle-theme">Mode Sombre</button>
+        </div>
+    </header>
+
+    <div class="container">
+        <section id="competences">
+            <h2>Compétences techniques</h2>
+            <div class="buttons">
+                <button onclick="afficherCompetence('html')">HTML</button>
+                <button onclick="afficherCompetence('css')">CSS</button>
+                <button onclick="afficherCompetence('js')">JavaScript</button>
+                <button onclick="afficherCompetence('python')">Python</button>
+                <button onclick="afficherCompetence('git')">Git & GitHub</button>
+            </div>
+            <div id="description"></div>
+            <div id="compteur">
+                <h3>Compétences vues :</h3>
+                <ul id="liste-compteur"></ul>
+            </div>
+        </section>
+
+        <section id="projets">
+            <h2>Projets réalisés</h2>
+            <div class="projet">
+                <h3>Portfolio personnel</h3>
+                <p>Un site web pour me présenter et mes projets. Responsive et interactif.</p>
+                <a href="https://github.com/daodoz/portfolio" target="_blank" rel="noopener noreferrer">Voir sur GitHub</a>
+            </div>
+            <div class="projet">
+                <h3>Application météo</h3>
+                <p>Application JS consommant une API météo avec affichage en temps réel.</p>
+                <a href="https://github.com/daodoz/meteo-app" target="_blank" rel="noopener noreferrer">Voir sur GitHub</a>
+            </div>
+            <div class="projet">
+                <h3>To-Do List</h3>
+                <p>Liste de tâches en JavaScript avec sauvegarde dans le navigateur (localStorage).</p>
+                <a href="https://github.com/daodoz/todo-list" target="_blank" rel="noopener noreferrer">Voir sur GitHub</a>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>Téléphone : +237 6 70 42 25 97</p>
+            <p>Email : douglasvanel@gmail.com</p>
+            <p>LinkedIn : <a href="https://linkedin.com/in/dawson" target="_blank" rel="noopener noreferrer">DAWSON</a></p>
+            <p>Skype : dawson.ekondo</p>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Dawson Ekondo. Tous droits réservés.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

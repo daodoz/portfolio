@@ -1,0 +1,191 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #2c3e50;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+header, section, footer {
+    margin-bottom: 40px;
+}
+
+/* Conteneur général autour du contenu */
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.dark-mode .container {
+    background-color: #1e1e1e;
+}
+
+/* Header avec photo et texte alignés + bouton mode sombre */
+.header-content {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.profile-photo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #3498db;
+}
+
+header h1 {
+    color: inherit;
+    font-size: 2.5rem;
+}
+
+/* Bouton mode sombre / clair */
+#toggle-theme {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 8px 15px;
+    cursor: pointer;
+    border: none;
+    border-radius: 8px;
+    background-color: #3498db;
+    color: white;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: background-color 0.3s;
+}
+
+#toggle-theme:hover {
+    background-color: #2980b9;
+}
+
+.dark-mode #toggle-theme {
+    background-color: #555;
+    color: #eee;
+}
+
+.dark-mode #toggle-theme:hover {
+    background-color: #777;
+}
+
+/* Boutons compétences */
+.buttons button {
+    margin: 10px 10px 10px 0;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    background-color: #3498db;
+    color: white;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 1rem;
+    box-shadow: 0 4px 6px rgba(52, 152, 219, 0.3);
+    transition: background 0.3s, transform 0.2s;
+}
+
+.buttons button:hover {
+    background-color: #2980b9;
+    transform: scale(1.05);
+}
+
+/* Description compétence */
+#description {
+    margin-top: 20px;
+    background: #ecf0f1;
+    padding: 15px;
+    border-left: 5px solid #3498db;
+    border-radius: 6px;
+}
+
+.dark-mode #description {
+    background: #333;
+    border-left-color: #2980b9;
+}
+
+/* Liste compteur */
+#compteur {
+    margin-top: 20px;
+}
+
+#liste-compteur li {
+    margin-bottom: 5px;
+}
+
+/* Projet dans une box */
+.projet {
+    background-color: #fafafa;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: background-color 0.3s;
+}
+
+.projet a {
+    color: #e67e22;
+    text-decoration: none;
+}
+
+.projet a:hover {
+    text-decoration: underline;
+}
+
+.dark-mode .projet {
+    background-color: #2a2a2a;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    color: #777;
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+    .buttons button {
+        display: block;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        position: relative;
+    }
+    
+    .profile-photo {
+        width: 80px;
+        height: 80px;
+        margin-bottom: 15px;
+    }
+    
+    #toggle-theme {
+        position: static;
+        margin-bottom: 15px;
+    }
+}
